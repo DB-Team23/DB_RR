@@ -1,0 +1,30 @@
+Users:
+  username - pk
+  password
+
+restaurant:
+  id - pk
+  Name
+  Location
+  phone_number
+  avg_rating
+  cuisine
+  restaurant_url
+  restaurant_desc_blurb
+  price
+  venue_type
+
+Reviews:
+  id - pk
+  restaurant_id - fk
+  rating
+  comment
+  username - fk
+  timestamp
+
+Hours:
+  id - pk
+  restaurant_id - fk
+  day
+  open
+  close
