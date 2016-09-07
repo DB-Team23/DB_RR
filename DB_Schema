@@ -1,6 +1,9 @@
 Users:
   username - pk
   password
+  fname
+  lname
+  birthday
 
 restaurant:
   id - pk
