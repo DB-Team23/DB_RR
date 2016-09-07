@@ -18,6 +18,7 @@ Reviews:
   id - pk
   restaurant_id - fk
   rating
+  usr_checkin
   comment
   username - fk
   timestamp
