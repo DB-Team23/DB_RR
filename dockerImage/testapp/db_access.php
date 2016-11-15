@@ -1,12 +1,15 @@
 <?php
 
-$connection = oci_connect($username = 'username',
-                        $password = 'password',
+$connection = oci_connect($username = 'jcr',
+                        $password = 'Sweestu1!',
                         $connection_string = '//oracle.cise.ufl.edu/orcl');
 $statement = oci_parse($connection, 'SELECT * FROM users WHERE ROWNUM<=5');
 oci_execute($statement);
 
  $reply = array();
+ if(is_set($_GET)){
+   $temp = $_GET["test"];
+ }
 while ($row = oci_fetch_object($statement)) {
   $row_clean = [
     'username' => oci_result($statement, 'USERNAME'),

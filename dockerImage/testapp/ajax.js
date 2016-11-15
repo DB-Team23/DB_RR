@@ -6,6 +6,7 @@ function getData() {
   $.ajax({
     url: "db_access.php",
     type: "GET",
+    data: {"test": "var"},
     dataType: "json",
     success: function(json){
       console.log(json);
