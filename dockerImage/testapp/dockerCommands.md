@@ -1,5 +1,5 @@
 cd into dockerImage and run:
-`docker build alewitt/dbrr .`
+`docker build -t alewitt/dbrr .`
 
 to start the docker image use:
 `docker run -d -p 80:80 --name dbrr alewitt/dbrr`
