@@ -8,7 +8,7 @@ function getUser(){
 	$.ajax({
 		url: 'http://localhost/signin.php',
 		type: 'GET',
-		dataType: 'jsonp',
+		dataType: 'json',
 		success: function(data){
 			console.log(data);
 		}
