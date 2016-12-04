@@ -24,25 +24,25 @@ $(document).on('ready', function(){
 		else{
 			keyword.search = $(".keyword_search").val();
 		}
-		if ($(".btn-cuisine").html() == "Cuisine"){
+		if ($(".btn-cuisine").html().substring(0,4) == "Cuis"){
 			keyword.cuisine = "%";
 		}
 		else{
 			keyword.cuisine = $(".btn-cuisine").html();
 		}
-		if ($(".btn-venue-type").html() == "Venue Type"){
+		if ($(".btn-venue-type").html().substring(0,4) == "Venu"){
 			keyword.venue_type = "%";
 		}
 		else{
 			keyword.venue_type = $(".btn-venue-type").html();
 		}
-		if ($(".btn-price").html() == "Price"){
+		if ($(".btn-price").html().substring(0,4) == "Pric"){
 			keyword.price = "%";
 		}
 		else{
 			keyword.price = $(".btn-price").html().length;
 		}
-		if ($(".btn-rating").html() == "Average Rating"){
+		if ($(".btn-rating").html().substring(0,4) == "Aver"){
 			keyword.avg_rating = 0;
 		}
 		else{
@@ -66,7 +66,7 @@ $(document).on('ready', function(){
 		else{
 			keyword.zip = $(".zip_search").val();
 		}
-		if ($(".btn-order-by").html() == "Order By" || $(".btn-order-by").html() == "Average Rating"){
+		if ($(".btn-order-by").html().substring(0,4) == "Orde" || $(".btn-order-by").html().substring(0,4) == "Aver"){
 			keyword.order_by = "avg_rating";
 		}
 		else{
@@ -88,10 +88,10 @@ function populateAdvFields(){
 			console.log(data);
 
 			for(var i = 0; i < data.cuisine.length; i++){
-				$(".dd-cuisine").append(`<a class="dropdown-item" href="#">${data.cuisine[i].type}</a>`);
+				$(".dd-cuisine").append(`<li><a class="dropdown-item" href="#">${data.cuisine[i].type}</a></li>`);
 			}
 			for(var j = 0; j < data.venue_type.length; j++){
-				$(".dd-venue-type").append(`<a class="dropdown-item" href="#">${data.venue_type[j].type}</a>`);
+				$(".dd-venue-type").append(`<li><a class="dropdown-item" href="#">${data.venue_type[j].type}</a><li>`);
 			}
 		},
 		complete: function(){

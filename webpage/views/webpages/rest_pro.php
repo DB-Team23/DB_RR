@@ -19,7 +19,7 @@
 		
 		<form class="user-review">
   			<textarea class="review" maxlength="250">Write a Review</textarea><br>
-  			<input type="range" name="rating" min="1" max="5" step="1" placeholder="Rating" class="rating">
+  			<input type="range" name="rating" min="1" max="5" step=".1" placeholder="Rating" class="rating">
   			<input type="submit" value="Submit">
 		</form>		  					
 	</div>

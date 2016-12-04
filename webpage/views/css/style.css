@@ -126,3 +126,30 @@ input[type="password"] {
 .user-input{
 	width: 300px;
 }
+
+.bg-img-pro{
+  width: auto;
+  height: 380px;
+  background-image: url('../../photos/food.jpg');
+  background-size: cover;
+  margin-top:-100px;
+}
+
+.bg-gradient-pro{
+	content: '\A';
+    width: auto; 
+    height: 380px;
+    background:rgba(0,0,0,0.40);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+
+.adv_form{
+  margin-top: -260px;
+}
+
+.dropdown{
+  float: left;
+}

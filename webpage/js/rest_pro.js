@@ -1,9 +1,10 @@
 $(document).on('ready', function(){
+	console.log("ready");
 	populateRestPro(phone);
 	$(".user-review").on("submit", function(event){
 		$(".review").html('');
 		$(".rating").html('');
-		//event.preventDefault();
+		event.preventDefault();
 
 		var keyword = {};
 
@@ -13,7 +14,12 @@ $(document).on('ready', function(){
 		
 		keyword.rating = $(".rating").val();
 		keyword.phone = phone;
+		keyword.now = new Date();
+		keyword.now = keyword.now.toISOString()
+		keyword.now = keyword.now.substring(0,10);
+		console.log(keyword.now);
 		addReview(keyword);
+
 	});
 });
 
@@ -52,10 +58,14 @@ function addReview(review){
 	$.ajax({
 		url: '../../php/rest_pro_review.php',
 		type: 'POST',
-		dataType: 'json',
+		//dataType: 'text',
 		data: ({review: review}),
-		success: function(data){
-			location.reload;
+		success: function(){
+			//console.log(data);
+			window.location.replace(`rest_pro.php?phone=${review.phone}`);
+		},
+		error: function(request,error){
+			console.log(error);
 		}
 	});
 }
