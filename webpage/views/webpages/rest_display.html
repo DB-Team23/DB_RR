@@ -7,23 +7,70 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="../../js/rest_display.js"></script>
+	<script type="text/javascript">
+      $(document).on("ready",function(){
+        $(".table-counter").on("click", function(event){
+          event.preventDefault();
+        console.log("clicked");
+        $.ajax({
+            url: '/php/total_row.php',
+            type: 'GET',
+            dataType: 'text',
+            success: function(data){
+              console.log(data);
+              alert("Total Number Tuples: " + data);
+            },
+            error: function(request,error){
+              console.log(error);
+            },
+            complete: function(){
+              console.log("done!");
+            }
+        });
+      });
+      });
+      
+    </script>
 </head>
 <body>
 
-<div class = "container">
-	<div class="wrapper">
-		       
-		    <h3>Find A Restuarant!</h3>
-		    <form class="rest-form">
-    			<input class="user-input" type="search" name="search-term"
+<div class = "container-fluid">
+	<div class = "row">
+		<nav class="navbar navbar-light bg-faded">
+	        <img class="logo" src="../../photos/unnamed.png">
+	        <a class="navbar-brand" href="http://192.168.99.100/">ЯR</a>
+	        <ul class="nav navbar-nav navbar-right">
+	          <li class="nav-item active">
+	             <a class="nav-link" href="http://192.168.99.100/">Home <span class="sr-only">(current)</span></a>
+	          </li>
+	          <li class="nav-item active">
+	            <a class="nav-link table-counter" href=""><span>Total Tuples</span></a>
+	          </li>
+
+	        </ul>
+	      </nav>
+	</div>
+
+	<div class="row bg-img-pro">
+      <div class="bg-gradient-pro">
+
+      </div>
+    </div>
+
+		<form class="search-form" style="margin-top: -220px;
+		text-align:center;">
+			<h1 style="text-align:center; color:white; margin-bottom: 30px">Search for a Restaurant</h1>
+    		<input class="user-input" type="search" name="search-term"
     			placeholder="Name, City, Cuisine Type, etc... ">
-   				<button type="submit">Search</button>
-  			</form>
-			<div class="rest-info">
-			</div>			  
+   			<button class="btn btn-default" type="submit">Search</button>
+  		</form>	
+	
+	<div class="rest-info">
+	</div>
+</div>
+		  
 			  			
 				
-	</div>
 </div>
 
 </body>

@@ -1,5 +1,14 @@
 .navbar-right{
-	margin-right: 0px;
+	margin-right: 10px;
+}
+
+.logo{
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  width: 35px;
+  height: 35px;
 }
 
 .page_center{
@@ -15,11 +24,13 @@
 }
 
 .navbar-brand{
-	color: #000000;
+	color: red;
+  font-size: 30px;
 }
 
 .nav-link{
-	color: #000000;
+	color: red;
+  font-size: 16px;
 }
 
 .welcome{
@@ -125,4 +136,147 @@ input[type="password"] {
 
 .user-input{
 	width: 300px;
+}
+
+.bg-img-pro{
+  width: auto;
+  height: 430px;
+  background-image: url('../../photos/food.jpg');
+  background-size: cover;
+  margin-top:-100px;
+}
+
+.banner{
+  width: auto;
+  background-image: url('../../photos/banner-image1-1.png');
+  background-size: cover;
+  height: 110px;
+}
+
+.profile-info{
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+.bg-gradient-pro{
+	content: '\A';
+    width: auto; 
+    height: 430px;
+    background:rgba(0,0,0,0.40);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+
+
+.adv_form{
+  margin-top: -360px;
+  text-align: center;
+}
+
+.dropdown{
+  float: left;
+}
+
+.btn-primary{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.drop_row{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 355px; 
+}
+
+.alone_drop{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 530px;
+}
+
+.adv-info{
+  padding-top: 20px;
+  padding-left:40px;
+  padding-right: 40px;
+}
+
+.adv_rest_info{
+  border-bottom: black;
+  border-bottom-width: 2px;
+}
+
+.search_form{
+  margin-top: -270px;
+}
+
+.user-pic{
+    margin-left: 270px;
+    max-width: 250px;
+    max-height: 250px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin-right: 60px;
+}
+
+.rest-pic{
+    margin-left: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 10%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin-right: 50px;
+}
+
+.rest_pro_info{
+  margin-left: 40px;
+}
+
+.rest-reviews{
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  background-color: #eee;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.favorites{
+  margin-top: 30px;
+  margin-left: 260px;
+  margin-right: 260px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.rest-info{
+  margin-top: 120px;
+  margin-left: 10px;
+}
+
+input[type=range] {
+    display: block;
+    /* width: 100%; */
+    width: 600px;
+    margin-left: 295px;
+    margin-bottom: 10px;
+}
+
+.review{
+  width: 600px;
+  height: 100px;
+}
+
+.user-input {
+    width: 300px;
+    height: 34px;
 }

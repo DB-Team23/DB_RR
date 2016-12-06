@@ -11,10 +11,11 @@ function populateUserPro(username){
 		data: ({username: username}),
 		success: function(data){
 			console.log(data);
-			$(".user_pro_info").append(`<h5>${data[0].fname} ${data[0].lname}</h5>
-											<p>${data[0].username}</p>`);
+			$(".user_pro_info").append(`<h2>${data[0].lname} ${data[0].fname}</h2>
+											<p>Username: ${data[0].username}</p>
+											<p>Birthday: ${data[0].birthday}</p>`);
 			for(var i = 1; i < data.length; i++){
-				$(".user_pro_info").append(`<h5>${data[i].name}</h5>`);
+				$(".favorites").append(`<h4>${data[i].name}</h4>`);
 			}
 		}
 	})

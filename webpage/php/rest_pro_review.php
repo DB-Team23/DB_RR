@@ -6,10 +6,17 @@ $connection = oci_connect($username = 'jcr',
  if(isset($_POST)){
    $temp = $_POST["review"];
  }
-$statement = oci_parse($connection, "INSERT INTO review VALUES({$temp[rating]},to_timestamp({date('c')}),'Name77',{$temp[phone]},{$temp[text]})");
-oci_execute($statement);
-
-
+$statement = oci_parse($connection, "INSERT INTO review VALUES({$temp[rating]},to_timestamp('{$temp[now]}','YYYY-MM-DD'),(SELECT username FROM (
+		SELECT username FROM users ORDER BY dbms_random.value)
+		WHERE ROWNUM = 1),{$temp[phone]},'{$temp[text]}')");
+$r = oci_execute($statement);
+if($r){
+	echo 'success';
+}
+else{
+	echo 'fail';
+}
+//echo json_encode({now:date("c")});
 //
 // VERY important to close Oracle Database Connections and free statements!
 //

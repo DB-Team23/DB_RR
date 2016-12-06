@@ -1,6 +1,7 @@
 //var $ = require('jQuery');
 $(document).on('ready', function(){
-	$(".rest-form").on("submit", function(event){
+	$(".search-form").on("submit", function(event){
+		console.log("hello");
 		$(".rest-info").html('');
 		event.preventDefault();
 
@@ -12,6 +13,7 @@ $(document).on('ready', function(){
 
 
 function populateRest(keyword){
+	console.log("in here");
 	$.ajax({
 		url: '../../php/rest_display.php',
 		type: 'GET',
@@ -20,14 +22,17 @@ function populateRest(keyword){
 		success: function(data){
 			console.log(data);
 			for(var i = 0; i < data.length; i++){
-				$(".rest-info").append(`<div><h5>
+				$(".rest-info").append(`<div><h3>
 											<a href="rest_pro.php?phone=${data[i].phone}">${data[i].name}</a>
-											</h5>
+											</h3>
 											<p>Rating: ${data[i].avg_rating}</p>
 											<p>Address: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zip}</p>
 											<p>Phone Number:${data[i].phone}</p>
 										</div>`);
 			}
+		},
+		error: function(reponse, error){
+			console.log(error);
 		}
 	})
 }
