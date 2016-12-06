@@ -60,6 +60,7 @@
 
 
 		<form class="adv_form">
+      <h2 style="text-align:center; color:white; margin-bottom: 20px">Advanced Search</h2>
 		  <input class="keyword_search" type="text" placeholder="Keyword Search">
 
       <div class="row drop_row">
@@ -121,6 +122,7 @@
           <ul class="dropdown-menu dd-order-by">
             <li><a class="dropdown-item" href="#">Average Rating</a></li>
             <li><a class="dropdown-item" href="#">Price</a></li>
+          </ul>
         </div>
       </div>
 
@@ -131,6 +133,7 @@
 
  		<div class="adv-info">
 		</div>	
+  </div>
 			  					
 </div>
 

@@ -40,12 +40,15 @@ $weekend_close = oci_result($statement, 21);
   function check_open($week_open, $week_close, $weekend_open, $weekend_close){
   	if(date("l") == "Saturday" || date("l") == "Sunday"){
   		$cur_time = "01-JAN-00 " . date("h.i.s A");
-  		//return $weekend_open;
   		return ($cur_time >= $weekend_open && $cur_time < $weekend_close);
   	}
   	else{
   		$cur_time = "01-JAN-00 " . date("h.i.s A");
-  		return ($cur_time >= $week_open && $cur_time < $week_close);
+      if(date("A") == "AM"){
+  		  return ($cur_time >= $week_open);
+      } else {
+        return ($cur_time < $week_close);
+      }
   	}
   }
 

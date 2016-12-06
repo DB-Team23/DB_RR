@@ -146,6 +146,20 @@ input[type="password"] {
   margin-top:-100px;
 }
 
+.banner{
+  width: auto;
+  background-image: url('../../photos/banner-image1-1.png');
+  background-size: cover;
+  height: 110px;
+}
+
+.profile-info{
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
 .bg-gradient-pro{
 	content: '\A';
     width: auto; 
@@ -157,8 +171,9 @@ input[type="password"] {
    -moz-transition: all 0.5s;
 }
 
+
 .adv_form{
-  margin-top: -280px;
+  margin-top: -360px;
   text-align: center;
 }
 
@@ -196,4 +211,72 @@ input[type="password"] {
 
 .search_form{
   margin-top: -270px;
+}
+
+.user-pic{
+    margin-left: 270px;
+    max-width: 250px;
+    max-height: 250px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin-right: 60px;
+}
+
+.rest-pic{
+    margin-left: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 10%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin-right: 50px;
+}
+
+.rest_pro_info{
+  margin-left: 40px;
+}
+
+.rest-reviews{
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  background-color: #eee;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.favorites{
+  margin-top: 30px;
+  margin-left: 260px;
+  margin-right: 260px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.rest-info{
+  margin-top: 120px;
+  margin-left: 10px;
+}
+
+input[type=range] {
+    display: block;
+    /* width: 100%; */
+    width: 600px;
+    margin-left: 295px;
+    margin-bottom: 10px;
+}
+
+.review{
+  width: 600px;
+  height: 100px;
+}
+
+.user-input {
+    width: 300px;
+    height: 34px;
 }
