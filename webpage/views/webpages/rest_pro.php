@@ -13,6 +13,19 @@
 
 <div class = "container">
 	<div class="wrapper">
+	 <nav class="navbar navbar-light bg-faded">
+        <img class="logo" src="../../photos/unnamed.png">
+        <a class="navbar-brand" href="http://192.168.99.100/">ЯR</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item active">
+             <a class="nav-link" href="http://192.168.99.100/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link table-counter" href=""><span>Total Tuples</span></a>
+          </li>
+
+        </ul>
+      </nav>
 		<div class="rest_pro_info">
 
 		</div>

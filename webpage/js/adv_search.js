@@ -132,15 +132,12 @@ function populateRest(user_data){
 		success: function(data){
 			console.log(data);
 			for(var i = 0; i < data.length; i++){
-				$(".adv-info").append(`<div><h5>
+				$(".adv-info").append(`<div class="adv_rest_info"><h3>
 											<a href="rest_pro.php?phone=${data[i].phone}">${data[i].name}</a>
-											</h5>
-											<p>Rating: ${data[i].avg_rating}</p>
-											<p>Address: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zip}</p>
-											<p>Phone Number: ${data[i].phone}</p>
-											<p>Price: ${data[i].price}</p>
-											<p>Cuisine: ${data[i].cuisine}</p>
-											<p>Venue Type: ${data[i].venue_type}</p>
+											</h3>
+											<p>Rating: ${data[i].avg_rating}                Address: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zip}</p>
+											<p>Phone Number: ${data[i].phone}               Price: ${data[i].price}</p>
+											<p>Cuisine: ${data[i].cuisine}                  Venue Type: ${data[i].venue_type}</p>
 										</div>`);
 			}
 		}
